@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Switch Layout</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="buttons-container">
+    <button id="column-btn">switch column order</button>
+    <button id="row-btn">switch row order</button>
+</div>
+
+<div id="outer-container" class="flex-container">
+    <div id="inner-container1" class="inner-container flex-container column">
+        <p class="item item1">
+            The Flip plugin lets you seamlessly transition between two states even
+            if there are sweeping changes to the structure of the DOM like
+            re-parenting of elements which would normally cause them to jump to a
+            new position/size.
+        </p>
+        <p class="item item2">
+            All you need to do is get the initial state using
+            Flip.getState(targets), make whatever changes you'd like to the DOM or
+            styling, and then call Flip.from(state). GSAP will handle the rest!
+        </p>
+    </div>
+
+    <div id="inner-container2" class="inner-container flex-container column">
+        <p class="item item3">
+            "FLIP" is an animation technique that stands for "First", "Last",
+            "Invert", "Play".
+        </p>
+        <p class="item item4">
+            Now go "flip out" and have some fun with the new plugin.
+        </p>
+    </div>
+</div>
+
+<script src="../gsap.min.js"></script>
+<script src="../Flip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
