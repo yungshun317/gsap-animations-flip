@@ -39,3 +39,21 @@ console.log(movingContent);
     length: 6
     [[Prototype]]: Array(0)
 */
+
+function switchLayout(newLayout) {
+    const state = Flip.getState(movingContent);
+
+    newLayout === "column" ? outerContainer.classList.add("column") : outerContainer.classList.remove("column");
+
+    containers.forEach(container => container.classList.toggle("reverse"));
+
+    Flip.from(state, {
+        absolute: true,
+        nested: true,
+        duration: 2,
+        ease: "power1.inOut"
+    });
+}
+
+document.getElementById("column-btn").addEventListener("click", () => switchLayout("column"));
+document.getElementById("row-btn").addEventListener("click", () => switchLayout("row"));
